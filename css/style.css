@@ -9,35 +9,37 @@ body{
     background-color: rgb(226, 43, 150);
     padding: 1% 1%;
 }
-/* Styles pour les écrans de moins de 600px (Smartphones) */
+/* Pour les écrans de téléphone (max 600px) */
 @media (max-width: 600px) {
+    
+    /* On force les boîtes à aller à la ligne */
     .boxes {
-        flex-direction: column; /* Aligne les boîtes verticalement */
-        height: auto;           /* Laisse la zone s'agrandir en hauteur */
-        align-items: center;
-        margin-top: 50px;       /* Ajuste l'espace du haut */
+        display: flex;
+        flex-direction: column; /* Aligne verticalement */
+        align-items: center;    /* Centre les boîtes */
+        height: auto;           /* Enlève la hauteur fixe de 280px */
+        margin-top: 20px;       /* Ajuste l'espace en haut */
+        transform: none;        /* On enlève le translate pour éviter les décalages */
     }
 
     .box {
-        width: 90%;             /* Les boîtes prennent presque toute la largeur */
-        height: 300px;          /* On redonne une hauteur fixe pour chaque projet */
-        margin-bottom: 20px;    /* Espace entre les boîtes empilées */
+        width: 90%;             /* La boîte prend presque toute la largeur du téléphone */
+        height: 350px;          /* On redonne une vraie hauteur à chaque boîte */
+        margin-bottom: 25px;    /* Espace entre les projets */
     }
 
-    .main-header {
-        padding: 15px;
-        justify-content: center; /* Centre le logo sur mobile */
+    .box h3 {
+        font-size: 1.2rem;      /* On réduit un peu la taille du texte */
+        position: relative;     /* On l'enlève du mode absolute pour qu'il respire */
+        top: 15px;
+        left: 15px;
     }
 
-    .logo h1 {
-        font-size: 20px;        /* Titre plus petit pour mobile */
+    .cat {
+        top: 35%;               /* Repositionne l'image dans la boîte mobile */
+        height: 55%;
     }
 }
-
-
-
-
-
 
 
 
