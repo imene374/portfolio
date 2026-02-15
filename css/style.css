@@ -9,6 +9,56 @@ body{
     background-color: rgb(226, 43, 150);
     padding: 1% 1%;
 }
+/* Styles pour les écrans de moins de 600px (Smartphones) */
+@media (max-width: 600px) {
+    .boxes {
+        flex-direction: column; /* Aligne les boîtes verticalement */
+        height: auto;           /* Laisse la zone s'agrandir en hauteur */
+        align-items: center;
+        margin-top: 50px;       /* Ajuste l'espace du haut */
+    }
+
+    .box {
+        width: 90%;             /* Les boîtes prennent presque toute la largeur */
+        height: 300px;          /* On redonne une hauteur fixe pour chaque projet */
+        margin-bottom: 20px;    /* Espace entre les boîtes empilées */
+    }
+
+    .main-header {
+        padding: 15px;
+        justify-content: center; /* Centre le logo sur mobile */
+    }
+
+    .logo h1 {
+        font-size: 20px;        /* Titre plus petit pour mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Styles pour les écrans moyens (Tablettes) */
+@media (min-width: 601px) and (max-width: 1000px) {
+    .boxes {
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .box {
+        width: 45%;             /* Deux boîtes par ligne */
+        height: 280px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
 
 .main-header {
     width: 100%;
