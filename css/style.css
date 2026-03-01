@@ -9,55 +9,6 @@ body{
     background-color: rgb(226, 43, 150);
     padding: 1% 1%;
 }
-/* Pour les écrans de téléphone (max 600px) */
-@media (max-width: 600px) {
-    
-    /* On force les boîtes à aller à la ligne */
-    .boxes {
-        display: flex;
-        flex-direction: column; /* Aligne verticalement */
-        align-items: center;    /* Centre les boîtes */
-        height: auto;           /* Enlève la hauteur fixe de 280px */
-        margin-top: 20px;       /* Ajuste l'espace en haut */
-        transform: none;        /* On enlève le translate pour éviter les décalages */
-    }
-
-    .box {
-        width: 90%;             /* La boîte prend presque toute la largeur du téléphone */
-        height: 350px;          /* On redonne une vraie hauteur à chaque boîte */
-        margin-bottom: 25px;    /* Espace entre les projets */
-    }
-
-    .box h3 {
-        font-size: 1.2rem;      /* On réduit un peu la taille du texte */
-        position: relative;     /* On l'enlève du mode absolute pour qu'il respire */
-        top: 15px;
-        left: 15px;
-    }
-
-    .cat {
-        top: 35%;               /* Repositionne l'image dans la boîte mobile */
-        height: 55%;
-    }
-}
-
-
-
-
-/* Styles pour les écrans moyens (Tablettes) */
-@media (min-width: 601px) and (max-width: 1000px) {
-    .boxes {
-        justify-content: space-around;
-        height: auto;
-    }
-
-    .box {
-        width: 45%;             /* Deux boîtes par ligne */
-        height: 280px;
-        margin-bottom: 30px;
-    }
-}
-
 
 
 
@@ -119,6 +70,7 @@ display: flex;
 flex-direction: row;
 justify-self: center;
 margin-bottom: 50px;
+
 }
 
 .photoprofile{
@@ -286,4 +238,40 @@ flex-direction: row;
 justify-content: center;
 margin-bottom: 25px;
 
+}
+
+
+
+/* Tablettes */
+@media (max-width: 1000px) {
+    .box {
+        width: 45%; /* 2 boites par ligne */
+    }
+    
+    .div1 {
+        flex-direction: column; /* Photo en haut, texte en dessous */
+        text-align: center;
+    }
+    
+    .photoprofile {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Téléphones (L'un au dessus de l'autre) */
+@media (max-width: 600px) {
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%; /* Prend toute la largeur */
+        margin-bottom: 20px;
+    }
+
+    .div1 {
+        width: 95%;
+    }
 }
